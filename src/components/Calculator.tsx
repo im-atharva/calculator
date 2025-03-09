@@ -208,7 +208,6 @@ export function Calculator({ className }: CalculatorProps) {
     setError(null);
     // @ts-ignore
     console.log(expression);
-    // console.log(`${expression}`);
   };
 
   const handleClearHistory = () => {

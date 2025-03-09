@@ -91,6 +91,7 @@ export function Calculator({ className }: CalculatorProps) {
           setOperation(op);
           setShouldResetDisplay(true);
           setDisplayPrefix(currentOp.format ? currentOp.format(current) : "");
+          setDisplay("1"); // Set default value to 1 for the second operand
           return;
         } else if (currentOp.format) {
           // For operations like x² that format the display
@@ -286,9 +287,17 @@ export function Calculator({ className }: CalculatorProps) {
                     {error}
                   </div>
                 )}
-                <div className="current-value text-white text-2xl sm:text-3xl font-bold tracking-tight truncate">
-                  {displayPrefix}
-                  {display}
+                <div className="current-value text-white text-2xl sm:text-3xl font-bold tracking-tight truncate flex items-center justify-end">
+                  <span>{displayPrefix}</span>
+                  <span
+                    className={`${
+                      operation && shouldResetDisplay
+                        ? 'opacity-70 after:content-["_"] after:animate-pulse'
+                        : ""
+                    }`}
+                  >
+                    {display}
+                  </span>
                 </div>
               </div>
             </div>

@@ -198,7 +198,7 @@ export function Calculator({ className }: CalculatorProps) {
     }
   };
 
-  const handleHistoryItemClick = (expression: string, result: string) => {
+  const handleHistoryItemClick = (_expression: string, result: string) => {
     setDisplay(result);
     setPreviousValue(null);
     setOperation(null);
@@ -206,7 +206,9 @@ export function Calculator({ className }: CalculatorProps) {
     setDisplayPrefix("");
     setShouldResetDisplay(true);
     setError(null);
-    console.log(`${expression}`);
+    // @ts-ignore
+    console.log(expression);
+    // console.log(`${expression}`);
   };
 
   const handleClearHistory = () => {

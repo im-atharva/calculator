@@ -206,6 +206,7 @@ export function Calculator({ className }: CalculatorProps) {
     setDisplayPrefix("");
     setShouldResetDisplay(true);
     setError(null);
+    console.log(`${expression}`);
   };
 
   const handleClearHistory = () => {

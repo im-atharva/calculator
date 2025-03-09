@@ -264,7 +264,7 @@ export function Calculator({ className }: CalculatorProps) {
   return (
     <div className="flex flex-col items-center pt-2">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-[#5ad3c5] tracking-wider">
-        Calculator
+        Superr Calculator App
       </h1>
       <div className="flex flex-col lg:flex-row gap-3 w-full max-w-[720px]">
         <div className="flex flex-col gap-3">
